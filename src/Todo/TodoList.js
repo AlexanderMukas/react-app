@@ -11,14 +11,14 @@ const styles = {
     }
 }
 
-
-export default function TodoList(){
+// todos = props
+export default function TodoList(props){
     return(
         <ul style={styles.ul}>
-            <TodoItem />
-            <TodoItem />
-            <TodoItem />
-            <TodoItem />
+            {props.todos.map(todo => {
+                return <TodoItem todo={todo} />
+            })}
+
         </ul>
     ); 
 }
