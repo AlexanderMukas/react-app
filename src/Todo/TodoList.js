@@ -1,7 +1,7 @@
 import React from 'react';
 
 import TodoItem from './TodoItem';
-//import Desc from './Desc';
+import Desc from './Desc';
 
 // styles for component
 const styles = {
@@ -17,17 +17,19 @@ export default function TodoList(props){
     return(
         <div>
         <ul style={styles.ul}>
-            {props.todos.map(todo => {
-                return <TodoItem todo={todo} />
+            {props.todos.map( (todo, index) => {
+                return <TodoItem todo={todo} key={todo.id} index={index}/>
             })}
 
         </ul>
         <p>
-            {props.testStr}
+        
+        {
+            //drop string in Component Desc.js
+        }
+        <Desc str={props.testStr} /> 
+                
 
-            {
-                //<Desc testStr={testStr}/>
-            }
         </p>
         </div>   
          

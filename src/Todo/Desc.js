@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Desc(){
+export default function Desc( {str}){
     return(
         <p>
-            Test text 1 2 3 !!!
+            {str}
         </p>
     )
 }
