@@ -11,14 +11,14 @@ function App() {
     { id: 2, completed: false, title: 'Create the first ReactJS app'},
     { id: 3, completed: false, title: 'Feed my dog'},
     { id: 4, completed: false, title: 'Push all commits in GitHub'}
-  ]
-
+  ];
+  const testStr = 'Test String in react';
 
   return (
     <div className="wrapper">
       <h1>React tutorial - TodoList</h1>
 
-      <TodoList todos={todos}/>
+      <TodoList todos={todos} testStr={testStr}/>
     </div>
   );
 }
